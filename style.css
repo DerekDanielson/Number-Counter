@@ -9,3 +9,7 @@
     padding-left: 6.5%;
     font-size: 8rem;
 }
+
+button {
+    border-radius: 20%;
+}

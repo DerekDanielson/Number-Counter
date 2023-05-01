@@ -1,13 +1,41 @@
+body {
+    background: rgb(67, 67, 138);
+}
+
 #container {
-    padding-top: 10%;
-    padding-left: 40%;
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
     font-size: 2rem;
+    border: 2px solid;
+    border-radius: 2%;
+    background: rgb(79, 79, 158);
+    box-shadow: 10px 5px 5px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+span {
+    display: flex;
+    margin-top: -10%;
+    margin-left: 40%;
+    color: whitesmoke;
 }
 
 #value {
     padding-top: 10%;
-    padding-left: 6.5%;
+    padding-left: 6%;
     font-size: 8rem;
+}
+
+#btn-container {
+    margin-left: 36%;
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 
 button {

@@ -10,20 +10,19 @@ const buttons = document.querySelectorAll('.btn');
 buttons.forEach(function (btn){
     btn.addEventListener('click', function(e){
         const val = e.currentTarget.classList;
-        if(val.contains('decrease')){
+        if (val.contains('decrease')){
             count--;
-        } else if(val.contains('increase')){
+        } else if (val.contains('increase')){
             count++;
         } else {
             count = 0;
         }
-        if(count <= -1 ){
+
+        if (count <= -1 ){
             numValue.style.color = 'rgb(248, 2, 166)';
-        }
-        if(count >= 1){
+        } else if (count >= 1){
             numValue.style.color = 'rgb(46, 248, 6)';
-        }
-        if(count === 0){
+        } else {
             numValue.style.color = 'whitesmoke';
         }
         

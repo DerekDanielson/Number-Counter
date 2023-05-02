@@ -17,6 +17,16 @@ buttons.forEach(function (btn){
         } else {
             count = 0;
         }
+        if(count <= -1 ){
+            numValue.style.color = 'rgb(248, 2, 166)';
+        }
+        if(count >= 1){
+            numValue.style.color = 'rgb(46, 248, 6)';
+        }
+        if(count === 0){
+            numValue.style.color = 'whitesmoke';
+        }
+        
         numValue.textContent = count;
     });
 });

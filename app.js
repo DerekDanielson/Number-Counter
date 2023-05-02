@@ -4,23 +4,19 @@ let count = 0;
 
 // Get elements
 const numValue = document.getElementById('value');
-const decrease = document.getElementById('decrease');
-const reset = document.getElementById('reset');
-const increase = document.getElementById('increase');
+const buttons = document.querySelectorAll('.btn');
 
-
-decrease.addEventListener('click', numDecrease);
-reset.addEventListener('click', numReset);
-increase.addEventListener('click', numIncrease);
-
-function numDecrease(){
-    numValue.textContent = count--;
-}
-
-function numReset(){
-    numValue.textContent = 0;
-}
-
-function numIncrease(){
-    numValue.textContent = count++;
-}
+// Add event listener for each button and change count
+buttons.forEach(function (btn){
+    btn.addEventListener('click', function(e){
+        const val = e.currentTarget.classList;
+        if(val.contains('decrease')){
+            count--;
+        } else if(val.contains('increase')){
+            count++;
+        } else {
+            count = 0;
+        }
+        numValue.textContent = count;
+    });
+});
